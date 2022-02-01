@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h2>{{ name }}</h2>
+    <p>{{ symbol }}</p>
+    one share costs: <h3>{{ price }}</h3>
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input hidden name="symbol2" type="text" class="form-control" value="{{ symbol }}" readonly><br>
+            <input type="number" min=1 class="form-control" name="shares" autocomplete="off" placeholder="Shares">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+{% endblock %}

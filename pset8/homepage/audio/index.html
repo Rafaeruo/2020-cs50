@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+
+    <title>Audio Spectogram Message Concealing</title>
+</head>
+<body>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../duck/index.html">Duck</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../encoding/index.html">Secret Message</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">Spectogram</a>
+          </li>
+      </ul>
+
+      <h1>Audio Spectogram Message Concealing</h1>
+      <h2>To start, take a listen: </h2>
+      <div class="alert alert-warning" role="alert">
+        WEIRD AUDIO AHEAD
+      </div>
+      <audio controls><!--Audio controls functionality from w3schools-->
+        <source src="audio.wav" type="audio/wav">
+      Your browser does not support the audio element.
+      </audio>
+      <p>Don't worry, this is not a bug. The special part of this audio is not how it sounds, but how it looks:</p>
+
+      <h2>Spectogram Message: </h2>
+      <input type="button" class="btn btn-light" onclick="show()" value="Show sound spectogram" id="show_button">
+      <img src="" id="spectogram_image" alt="">
+      
+      <h2>Create your own:</h2>
+      <p>Unfortunately, I couldn't find a way to do this using js. HOWEVER, that doesn't mean there aren't any alternatives on the internet!</p>
+      <p>The one I used, for example, is the following:</p>
+      <a href="https://www.audiocheck.net/audiocheck_spectrotyper.php">Create your own audio with custom spectogram text.</a>
+      <script src="main.js"></script>
+</body>
+</html>

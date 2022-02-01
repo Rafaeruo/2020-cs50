@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    
+    <title>Duck Feelings Challenge - Simple Image Steganography</title>
+</head>
+<body>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Duck</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../encoding/index.html">Secret Message</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../audio/index.html">Spectogram</a>
+          </li>
+      </ul>
+    <h1>Duck Feelings Challenge - Simple Image Steganography</h1>
+    <h3>Find out how the duck is feeling and check your answer at the bottom of the page!</h3>
+
+    <img src="duck.png" title="duck feelings" id="duck_image">
+    
+    <input type="range" min="0" max="50" value="1" class="slider" id="saturation_slider" oninput="update();">
+    <p id="saturation_value">Saturation: 1</p>
+
+    <input type="range" min="0" max="300" value="200" class="slider" id="contrast_slider" oninput="update();">
+    <p id="contrast_value">Contrast: 200%</p>
+
+    <input type="range" min="0" max="300" value="50" class="slider" id="brightness_slider" oninput="update();">
+    <p id="brightness_value">Brightness: 50%</p>
+
+    <form onsubmit="check(); return false;" id="duck_form">
+        <input type="text" id="answer" placeholder="Answer">
+        <input type="submit" >
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>

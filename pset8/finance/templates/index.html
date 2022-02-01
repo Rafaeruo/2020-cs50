@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h1>Portfolio</h1>
+    <h3>Cash: {{ usd(cash) }}</h3>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for s in stocks %}
+            <tr>
+                <td>{{ s['symbol'] }}</td>
+                <td>{{ s['name'] }}</td>
+                <td>{{ s['shares'] }}</td>
+                <td>{{ usd(s['price']) }}</td>
+                <td>{{ usd(s['shares'] * s['price']) }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>{{ usd(total) }}</th>
+        </tr>
+    </table>
+{% endblock %}

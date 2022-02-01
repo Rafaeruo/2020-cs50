@@ -1,0 +1,87 @@
+/*main css document that serves all html files with common tweaks*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 7% 1% 7%;
+}
+
+
+h1{
+    padding-top: 3%;
+}
+
+/*home*/
+
+#home_quote{
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#home_parag{
+    text-align: center;
+}
+
+#home_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+/*--------------------------------------------*/
+/*duck*/
+#duck_image{
+    width: 90%;
+    max-width: 600px;
+    filter: saturate(1) contrast(200%) brightness(50%);
+    padding: 3% 0 3% 0;
+}
+
+#duck_form{
+    padding: 3% 0 3% 0;
+}
+
+.slider{
+    width: 90%;
+    max-width: 600px;
+}
+
+/*--------------------------------------------*/
+/*encoding*/
+
+#encoding_form{
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="button"]:not(.home_button){
+    width: 90%;
+    max-width: 1000px;
+}
+
+h2{
+    padding: 3% 0 3% 0;
+}
+
+.encoding_h3{
+    padding-top: 5%;
+}
+
+#img_read, #img_encoded, #img_proof{
+    width: 30%;
+    padding-bottom: 5px;
+}
+
+/*--------------------------------------------*/
+/*encoding*/
+
+#spectogram_image{
+    width: 90%;
+    max-width: 1000px;
+}

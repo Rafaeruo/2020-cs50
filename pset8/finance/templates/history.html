@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1>History</h1>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Operation</th>
+            <th>Shares</th>
+            <th>Price/Share</th>
+            <th>Date and Time</th>
+        </tr>
+        {% for t in history %}
+            <tr>
+                <td>{{ t['symbol'] }}</td>
+                {% if t['operation'] == 'b' %}
+                    <td>Purchase</td>
+                {% else %}
+                    <td>Sale</td>
+                {% endif %}
+                <td>{{ t['shares'] }}</td>
+                <td>{{ usd(t['price']) }}</td>
+                <td>{{ t['datetime'] }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}
